@@ -68,3 +68,4 @@ def filter_numbers(nums, filter_type):
         return list(filter(is_even, nums))
     else:
         return list(filter(is_prime, nums))
+
