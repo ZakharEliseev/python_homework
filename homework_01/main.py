@@ -69,3 +69,5 @@ def filter_numbers(nums, filter_type):
     else:
         return list(filter(is_prime, nums))
 
+
+
