@@ -13,8 +13,7 @@ def power_numbers(*nums):
     """
     num_list = []
     for num in nums:
-        if num != num ** 2:
-            num_list.append(num ** 2)
+        num_list.append(num ** 2)
     return num_list
 
 
@@ -36,19 +35,15 @@ def is_prime(a):
 
 
 def is_odd(*nums):
-    odd_list = []
     for i in nums:
         if i % 2 != 0:
-            odd_list.append(i)
-    return list(odd_list)
+            return i
 
 
 def is_even(*nums):
-    even_list = []
     for i in nums:
         if i % 2 == 0:
-            even_list.append(i)
-    return list(even_list)
+            return i
 
 
 def filter_numbers(nums, filter_type):
