@@ -34,16 +34,12 @@ def is_prime(a):
         return False
 
 
-def is_odd(*nums):
-    for i in nums:
-        if i % 2 != 0:
-            return i
+def is_odd(num):
+    return num % 2
 
 
-def is_even(*nums):
-    for i in nums:
-        if i % 2 == 0:
-            return i
+def is_even(num):
+    return num % 2 == 0
 
 
 def filter_numbers(nums, filter_type):
