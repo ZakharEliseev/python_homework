@@ -8,15 +8,14 @@ from homework_02.engine import Engine
 
 @dataclass(Engine)
 class Car(Vehicle):
-    engine = None
+    engine = Engine()
 
     def __init__(self, weight=0, fuel=0, fuel_consumption=0):
         super().__init__(weight=0, fuel=0, fuel_consumption=0, )
         pass
 
-    @classmethod
-    def set_engine(cls, value):
-        pass
+    def set_engine(self, volume, pistons):
+        Engine.__init__(self, volume, pistons)
 
 
 
