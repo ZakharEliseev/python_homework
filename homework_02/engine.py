@@ -4,8 +4,7 @@ create dataclass `Engine`
 from dataclasses import dataclass
 
 
-@dataclass
+@dataclass()
 class Engine:
-    def __init__(self, volume, pistons):
-        self.volume = volume
-        self.pistons = pistons
+    volume: None
+    pistons: None

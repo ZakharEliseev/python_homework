@@ -3,25 +3,16 @@
 """
 from dataclasses import dataclass
 
-from docker.api import volume
-
 from homework_02.base import Vehicle
 from homework_02.engine import Engine
 
 
-@dataclass(Engine)
+@dataclass()
 class Car(Vehicle):
-    engine = None
+    engine = Engine(volume=None, pistons=None)
 
-    def __init__(self, weight=0, fuel=0, fuel_consumption=0):
-        super().__init__(weight=0, fuel=0, fuel_consumption=0, )
-        pass
+    def __init__(self, ):
+        super().__init__(weight=0, fuel=0, fuel_consumption=0)
 
-    def set_engine(self, volume, pistons):
-        Engine.__init__(self, volume, pistons)
-
-
-
-
-#car1 = Car()
-#print(car1.__dict__)
+    def set_engine(self, engine):
+        engine.__init__(self, volume, pistons)

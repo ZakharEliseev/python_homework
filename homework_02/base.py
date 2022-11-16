@@ -1,4 +1,3 @@
-from _tracemalloc import start
 from abc import ABC
 
 from homework_02 import exceptions
