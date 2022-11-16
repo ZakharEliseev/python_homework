@@ -1,13 +1,14 @@
 from _tracemalloc import start
+from abc import ABC
 
 from homework_02 import exceptions
 from homework_02.exceptions import LowFuelError, NotEnoughFuel
 
 
-class Vehicle(LowFuelError, NotEnoughFuel):
+class Vehicle(ABC, LowFuelError, NotEnoughFuel):
     started = False
 
-    def __init__(self, weight=0, fuel=0, fuel_consumption=0, started=None):
+    def __init__(self, weight=0, fuel=0, fuel_consumption=0):
         self.weight = weight
         self.fuel = fuel
         self.fuel_consumption = fuel_consumption
@@ -29,6 +30,3 @@ class Vehicle(LowFuelError, NotEnoughFuel):
         else:
             raise exceptions.NotEnoughFuel
 
-
-#v = Vehicle(weight=0, fuel=100, fuel_consumption=10, started=True)
-#print(v.move(9))
