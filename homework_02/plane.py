@@ -9,9 +9,9 @@ class Plane(Vehicle):
     cargo = 0
     max_cargo = 0
 
-    def __init__(self, max_cargo, weight, fuel, fuel_consumption):
-        super().__init__(weight, fuel, fuel_consumption)
+    def __init__(self, weight, fuel, fuel_consumption ,  max_cargo):
         self.max_cargo = max_cargo
+        super().__init__(weight, fuel, fuel_consumption)
 
     def load_cargo(self, cargo):
         if (cargo + self.cargo) <= self.max_cargo:
@@ -24,9 +24,4 @@ class Plane(Vehicle):
         dist = self.cargo
         self.cargo = 0
         return dist
-
-
-c = Plane(10, None, None, None)
-print(c.load_cargo(10))
-
 
