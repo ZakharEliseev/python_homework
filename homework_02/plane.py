@@ -26,7 +26,7 @@ class Plane(Vehicle):
         return dist
 
 
-c = Plane(10, 10 ,10 ,10)
+c = Plane(10, None, None, None)
 print(c.load_cargo(10))
 
 
