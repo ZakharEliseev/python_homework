@@ -14,7 +14,7 @@ class Plane(Vehicle):
         self.max_cargo = max_cargo
 
     def load_cargo(self, cargo):
-        if (cargo + self.cargo) < self.max_cargo:
+        if (cargo + self.cargo) <= self.max_cargo:
             self.cargo = self.cargo + cargo
             return self.cargo
         else:
@@ -26,5 +26,7 @@ class Plane(Vehicle):
         return dist
 
 
+c = Plane(10, 10 ,10 ,10)
+print(c.load_cargo(10))
 
 
