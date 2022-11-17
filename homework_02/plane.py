@@ -13,16 +13,17 @@ class Plane(Vehicle):
         super().__init__(weight, fuel, fuel_consumption)
         self.max_cargo = max_cargo
 
-    def load_cargo(self, cargo,) -> cargo:
-        if cargo + self.cargo < self.max_cargo:
-            cargo = self.cargo + cargo
-            return cargo
+    def load_cargo(self, cargo) -> cargo:
+        if (cargo + self.cargo) < self.max_cargo:
+            self.cargo = self.cargo + cargo
+            return self.cargo
         else:
             raise exceptions.CargoOverload
 
-    def remove_all_cargo(self, cargo) -> cargo:
-        cargo = self.cargo - cargo
-        return cargo
+    def remove_all_cargo(self) -> cargo:
+        dist = self.cargo
+        self.cargo = 0
+        return dist
 
 
 
