@@ -1,7 +1,7 @@
 """
 создайте класс `Plane`, наследник `Vehicle`
 """
-from homework_02 import exceptions
+from homework_02.exceptions import CargoOverload
 from homework_02.base import Vehicle
 
 
@@ -13,12 +13,12 @@ class Plane(Vehicle):
         super().__init__(weight, fuel, fuel_consumption)
         self.max_cargo = max_cargo
 
-    def load_cargo(self, num):
-        if (num + self.cargo) < self.max_cargo:
-            self.cargo = self.cargo + num
+    def load_cargo(self, cargo):
+        if (cargo + self.cargo) < self.max_cargo:
+            self.cargo = self.cargo + cargo
             return self.cargo
         else:
-            raise exceptions.CargoOverload
+            raise CargoOverload
 
     def remove_all_cargo(self):
         dist = self.cargo
