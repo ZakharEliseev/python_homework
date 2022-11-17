@@ -4,7 +4,7 @@ create dataclass `Engine`
 from dataclasses import dataclass
 
 
-@dataclass()
+@dataclass
 class Engine:
     volume: None
     pistons: None
