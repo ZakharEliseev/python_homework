@@ -17,8 +17,7 @@ class Plane(Vehicle):
         if (cargo + self.cargo) <= self.max_cargo:
             self.cargo = self.cargo + cargo
             return self.cargo
-        else:
-            raise CargoOverload
+        raise CargoOverload
 
     def remove_all_cargo(self):
         dist = self.cargo
